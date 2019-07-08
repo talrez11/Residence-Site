@@ -38,6 +38,11 @@ header div {
     text-decoration: none;
     padding: 0.5em;
     color: black;
+    transition: all 0.3s;
+}
+
+#menu-main-menu li a:hover {
+    color: #e1b058;
 }
 
 header div.social {
