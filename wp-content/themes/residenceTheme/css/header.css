@@ -1,0 +1,60 @@
+/*
+    Header style
+*/
+
+header {
+    display: block;
+    text-align: center;
+    position: relative;
+    padding: 3em 0em;
+}
+
+header a.logo {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 600px);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+header a.logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header div {
+    display: inline-block;
+}
+
+#menu-main-menu li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0em 0.5em;
+}
+
+#menu-main-menu li a {
+    display: block;
+    text-decoration: none;
+    padding: 0.5em;
+    color: black;
+}
+
+header div.social {
+    position: absolute;
+    top: 50%;
+    right: calc(50% - 600px);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+header div.social a {
+    display: inline-block;
+    margin: 0em 0.1em;
+}
+
+header div.social a img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
