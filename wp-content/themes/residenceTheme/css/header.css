@@ -41,6 +41,7 @@ header div {
     transition: all 0.3s;
 }
 
+#menu-main-menu li a.active,
 #menu-main-menu li a:hover {
     color: #e1b058;
 }

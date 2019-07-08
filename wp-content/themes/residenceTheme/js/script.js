@@ -1,4 +1,6 @@
 jQuery(window).ready(function() {
+	var headerNavigation = jQuery('#menu-main-menu a');
+
 	// Detecting mobile devices
 	var isMobile = {
 	    Android: function() {
@@ -20,4 +22,11 @@ jQuery(window).ready(function() {
 	        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 	    }
 	};
+
+	// Header Navigation active state
+	headerNavigation.on('click', function() {
+		var item = jQuery(this);
+		headerNavigation.not(item).removeClass('active');
+		item.addClass('active');
+	})
 });
