@@ -24,5 +24,25 @@
 </head>
 <body <?php body_class(); ?>>
 		<header>
+            <a href="/" class="logo">
+                <img src="<?php echo TEMPLATE_DIR.'/images/logo.jpg'?>" alt="logo">
+            </a>
 
+            <?php
+                wp_nav_menu( array(
+                    'theme_location' => 'Main Menu',
+                    'item_spacing' => 'discard'
+                    )
+                );
+            ?>
+
+            <div class="social">
+                <a class='facebook' href="/">
+                    <img src="<?php echo TEMPLATE_DIR.'/images/facebook.jpg'?>" alt="facebook">
+                </a>
+
+                <a class='instagram' href="/">
+                    <img src="<?php echo TEMPLATE_DIR.'/images/instagram.jpg'?>" alt="instagram">
+                </a>
+            </div>
         </header><!-- .site-header -->
