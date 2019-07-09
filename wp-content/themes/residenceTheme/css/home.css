@@ -95,13 +95,11 @@ section div.gallery img {
 }
 
 #image_gallery div.holder {
-    visibility: hidden;
-    max-height: 1px;
+    display: none;
 }
 
 #image_gallery div.holder.active {
-    visibility: visible;
-    max-height: 50px;
+    display: block;
 }
 
 button.slick-prev.slick-arrow,
