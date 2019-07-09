@@ -25,6 +25,9 @@ header a.logo img {
 
 header div {
     display: inline-block;
+    vertical-align: bottom;
+    position: relative;
+    top: 1.5em;
 }
 
 #menu-main-menu li {

@@ -9,6 +9,20 @@
 ?>
 
 <?php get_header(); ?>
-
-
+    <section class="header">
+        <?php
+        if( have_rows('header_gallery') ):
+            while ( have_rows('header_gallery') ) : the_row();
+                $title = get_sub_field('title');
+                $image = get_sub_field('image');
+                ?>
+                <div class="gallery">
+                    <h2><?php echo $title; ?></h2>
+                    <img src="<?php echo $image?>" alt="<?php echo $title;?>">
+                </div>
+            <?php endwhile;
+        else :
+        endif;
+        ?>
+    </section>
 <?php get_footer(); ?>

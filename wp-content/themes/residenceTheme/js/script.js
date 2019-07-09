@@ -23,6 +23,23 @@ jQuery(window).ready(function() {
 	    }
 	};
 
+	if(!isMobile.any()) {
+		// Header gallery
+		jQuery('.header').slick({
+			autoplay: true,
+			autoplaySpeed: 2000,
+			pauseOnFocus: false,
+			pauseOnHover: false,
+			fade: true,
+			auto: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: false,
+			adaptiveHeight: true,
+			arrows: false
+		});
+	}
+
 	// Header Navigation active state
 	headerNavigation.on('click', function() {
 		var item = jQuery(this);
