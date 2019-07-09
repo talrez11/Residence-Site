@@ -32,11 +32,13 @@ section div.gallery img {
     height: auto;
 }
 
+
 #about {
     display: block;
     padding: 2em calc((100% - 1200px)/ 2);
 }
 
+#residence h2,
 #about h2 {
     text-align: center;
     font-size: 2.5rem;
@@ -44,6 +46,7 @@ section div.gallery img {
     position: relative;
 }
 
+#residence h2:after,
 #about h2:after {
     content: '';
     display: block;
@@ -66,3 +69,31 @@ section div.gallery img {
     color: #e1b058;
 }
 
+#subject {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2em calc((100% - 1200px)/ 2);
+}
+
+#subject li a {
+    display: block;
+    border: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+#subject li a img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#image_gallery {
+    padding: 2em calc((100% - 1240px)/ 2);
+    position: relative;
+}
+
+#image_gallery div.holder {
+    display: none;
+}

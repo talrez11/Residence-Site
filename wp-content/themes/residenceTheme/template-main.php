@@ -42,4 +42,53 @@
         endif;
         ?>
     </section>
+
+    <section id="residence">
+        <h2>Our Residence</h2>
+        <ul id="subject">
+            <?php
+            if( have_rows('gallery') ):
+                while ( have_rows('gallery') ) : the_row();
+                    $title = get_sub_field('title');
+                    $subjectImage = get_sub_field('subject_image');
+                    ?>
+                    <li class="<?php echo $title; ?>">
+                        <a href="javascript:void(0);">
+                            <img src="<?php echo $subjectImage; ?>" alt="<?php echo $title; ?>">
+                        </a>
+                    </li>
+                <?php endwhile;
+            else :
+            endif;
+            ?>
+        </ul>
+
+        <div id="image_gallery">
+            <?php
+            if( have_rows('gallery') ):
+                while ( have_rows('gallery') ) : the_row();
+                    $title = get_sub_field('title');
+                    ?>
+                    <div class="holder <?php echo $title;?>">
+                        <ul class="images">
+                            <?php
+                            if( have_rows('related_images') ):
+                                while ( have_rows('related_images') ) : the_row();
+                                    $image = get_sub_field('image');
+                                    ?>
+                                    <li>
+                                        <img src="<?php echo $image; ?>" alt="">
+                                    </li>
+                                <?php endwhile;
+                            else :
+                            endif;
+                            ?>
+                        </ul>
+                    </div>
+                <?php endwhile;
+            else :
+            endif;
+            ?>
+        </div>
+    </section>
 <?php get_footer(); ?>

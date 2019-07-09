@@ -157,3 +157,7 @@ a img {
 p {
 	margin: 0.5em 0em;
 }
+
+p:empty {
+	display: none;
+}

@@ -38,6 +38,16 @@ jQuery(window).ready(function() {
 			adaptiveHeight: true,
 			arrows: false
 		});
+
+		jQuery('.images').slick({
+			pauseOnFocus: false,
+			pauseOnHover: false,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			adaptiveHeight: true,
+			arrows: true,
+			infinite: true
+		});
 	}
 
 	// Header Navigation active state
