@@ -23,6 +23,23 @@ jQuery(window).ready(function() {
 	    }
 	};
 
+	//control image gallery display
+	var subjectImages = jQuery('#subject li');
+	var imagesGallery = jQuery('#image_gallery div.holder');
+	console.log(imagesGallery);
+
+	subjectImages.on('click', function() {
+		var galleryNumber = jQuery(this).attr('class');
+		jQuery.each(imagesGallery, function() {
+			var item = jQuery(this);
+			if(item.hasClass(galleryNumber)){
+				item.addClass('active');
+			} else {
+				item.removeClass('active');
+			}
+		})
+	});
+
 	if(!isMobile.any()) {
 		// Header gallery
 		jQuery('.header').slick({
@@ -40,13 +57,11 @@ jQuery(window).ready(function() {
 		});
 
 		jQuery('.images').slick({
-			pauseOnFocus: false,
-			pauseOnHover: false,
 			slidesToShow: 3,
 			slidesToScroll: 1,
-			adaptiveHeight: true,
+			adaptiveHeight: false,
 			arrows: true,
-			infinite: true
+			waitForAnimate: false
 		});
 	}
 

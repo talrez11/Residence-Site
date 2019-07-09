@@ -95,5 +95,16 @@ section div.gallery img {
 }
 
 #image_gallery div.holder {
-    display: none;
+    visibility: hidden;
+    max-height: 1px;
+}
+
+#image_gallery div.holder.active {
+    visibility: visible;
+    max-height: 50px;
+}
+
+button.slick-prev.slick-arrow,
+button.slick-next.slick-arrow {
+    background-color: black;
 }
