@@ -25,4 +25,21 @@
         endif;
         ?>
     </section>
+
+    <section id="about">
+        <?php
+        if( have_rows('about') ):
+            while ( have_rows('about') ) : the_row();
+                $title = get_sub_field('title');
+                $description = get_sub_field('description');
+                ?>
+                <article>
+                    <h2><?php echo $title; ?></h2>
+                    <?php echo $description; ?>
+                </article>
+            <?php endwhile;
+        else :
+        endif;
+        ?>
+    </section>
 <?php get_footer(); ?>
