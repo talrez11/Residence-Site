@@ -23,23 +23,6 @@ jQuery(window).ready(function() {
 	    }
 	};
 
-	//control image gallery display
-	var subjectImages = jQuery('#subject li');
-	var imagesGallery = jQuery('#image_gallery div.holder');
-	console.log(imagesGallery);
-
-	subjectImages.on('click', function() {
-		var galleryNumber = jQuery(this).attr('class');
-		jQuery.each(imagesGallery, function() {
-			var item = jQuery(this);
-			if(item.hasClass(galleryNumber)){
-				item.addClass('active');
-			} else {
-				item.removeClass('active');
-			}
-		})
-	});
-
 	if(!isMobile.any()) {
 		// Header gallery
 		jQuery('.header').slick({
@@ -56,14 +39,35 @@ jQuery(window).ready(function() {
 			arrows: false
 		});
 
-		jQuery('.images').slick({
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			adaptiveHeight: false,
-			arrows: true,
-			waitForAnimate: false
+		jQuery.each(jQuery('#image_gallery ul'), function() {
+			jQuery(this).slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				arrows: true,
+				waitForAnimate: true,
+				focusOnSelect: true,
+				
+			});
 		});
 	}
+
+	// control image gallery display
+	var subjectImages = jQuery('#subject li');
+	var imagesGallery = jQuery('#image_gallery ul');
+
+	jQuery('#image_gallery ul.one').addClass('show');
+
+	subjectImages.on('click', function() {
+		var galleryNumber = jQuery(this).attr('class');
+		jQuery.each(imagesGallery, function() {
+			var item = jQuery(this);
+			if(item.hasClass(galleryNumber)){
+				item.addClass('show');
+			} else {
+				item.removeClass('show');
+			}
+		})
+	});
 
 	// Header Navigation active state
 	headerNavigation.on('click', function() {

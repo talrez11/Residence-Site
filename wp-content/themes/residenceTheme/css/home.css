@@ -74,7 +74,7 @@ section div.gallery img {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 2em calc((100% - 1200px)/ 2);
+    padding: 2em calc((100% - 1100px)/ 2);
 }
 
 #subject li a {
@@ -90,19 +90,29 @@ section div.gallery img {
 }
 
 #image_gallery {
-    padding: 2em calc((100% - 1240px)/ 2);
     position: relative;
-}
-
-#image_gallery div.holder {
-    display: none;
-}
-
-#image_gallery div.holder.active {
+    height: 340px;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
+    width: 1218px;
 }
 
+.holder ul {
+    max-height: 0px;
+    visibility: hidden;
+}
+
+.holder ul.show {
+    visibility: visible;
+}
 button.slick-prev.slick-arrow,
 button.slick-next.slick-arrow {
     background-color: black;
+    top: 140px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+    display: none;
 }

@@ -70,7 +70,7 @@
                     $title = get_sub_field('title');
                     ?>
                     <div class="holder <?php echo $title;?>">
-                        <ul class="images">
+                        <ul class="images <?php echo $title; ?>">
                             <?php
                             if( have_rows('related_images') ):
                                 while ( have_rows('related_images') ) : the_row();
