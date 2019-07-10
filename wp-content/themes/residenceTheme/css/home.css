@@ -32,12 +32,12 @@ section div.gallery img {
     height: auto;
 }
 
-
 #about {
     display: block;
     padding: 2em calc((100% - 1200px)/ 2);
 }
 
+#recommendation h2,
 #residence h2,
 #about h2 {
     text-align: center;
@@ -46,6 +46,7 @@ section div.gallery img {
     position: relative;
 }
 
+#recommendation h2:after,
 #residence h2:after,
 #about h2:after {
     content: '';
@@ -95,7 +96,7 @@ section div.gallery img {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    width: 1218px;
+    width: 1268px;
 }
 
 .holder ul {
@@ -115,4 +116,50 @@ button.slick-next.slick-arrow {
 .slick-prev::before,
 .slick-next::before {
     display: none;
+}
+
+#recommendation div.wrap {
+    background-image: url("/wp-content/themes/residenceTheme/images/recommand_background.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    position: relative;
+    padding: 10em 0em;
+}
+
+#recommendation ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#recommendation ul li {
+    display: inline-block;
+    vertical-align: top;
+    width: 410px;
+    border-top: 8px solid rgb(225, 176, 88);
+    background-color: rgba(255, 255, 255, 0.79);
+    padding: 3em 3em 5em 3em;
+    position: relative;
+    min-height: 500px;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#recommendation ul li p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+#recommendation ul li span {
+    display: block;
+    margin-top: 3em;
+    color: black;
+    font-weight: 700;
+    position: absolute;
+    bottom: 4em;
+    left: 3em;
 }

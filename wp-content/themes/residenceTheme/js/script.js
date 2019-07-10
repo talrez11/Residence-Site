@@ -46,7 +46,7 @@ jQuery(window).ready(function() {
 				arrows: true,
 				waitForAnimate: true,
 				focusOnSelect: true,
-				
+
 			});
 		});
 	}
