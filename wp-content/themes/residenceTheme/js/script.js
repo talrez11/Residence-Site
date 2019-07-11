@@ -75,4 +75,9 @@ jQuery(window).ready(function() {
 		headerNavigation.not(item).removeClass('active');
 		item.addClass('active');
 	})
+
+	jQuery(headerNavigation).on('click', function() {
+		var id = jQuery(this).attr('href');
+		jQuery("html, body").animate({ scrollTop: jQuery(id).offset().top - 50}, 1000);
+	});
 });
