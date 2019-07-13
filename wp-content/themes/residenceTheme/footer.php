@@ -10,6 +10,7 @@
 	<footer id="bottom">
         <h2>Contact Us</h2>
         <form id="contact">
+            <input type="hidden" name="action" value="send_contact_info">
             <label for="name">
                 <input type="text" id="name" name="name" placeholder="Name" required="required">
             </label>

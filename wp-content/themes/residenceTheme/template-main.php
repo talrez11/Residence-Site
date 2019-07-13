@@ -120,6 +120,7 @@
         <h2>BECOME A MEMBER AND SAVE</h2>
         <h3>Sign up for our free members program</h3>
         <form id="sign">
+            <input type="hidden" name="action" value="send_to_mailchimp">
             <label for="name">
                 <span>Name:</span>
                 <input type="text" id="name" name="name" required="required">

@@ -24,30 +24,8 @@
 	function send_to_mailchimp() {
 		// Put your MailChimp API and List ID hehe
 		$api_key = MAILCHIMP_API;
-		$list_id = '5af679a8d7';
-		$to = 'studiosuoton@gmail.com';
-        $cc = 'talreznic11@gmail.com';
-		$from = $_POST['email'];
-		$subject = 'פנייה מאתר דואטון';
-		$email_content = $_POST['message'];
-		$phone = $_POST['phone'];
-		$name = $_POST['fname'];
-		$email = $_POST['email'];
-		$content_type = 'Content-Type: text/html; charset=UTF-8';
-		$headers = array();
-		$headers[] = "From: $from <$from> \r\n";
-		$headers[] = "CC: $cc";
-		$headers[] = $content_type;
-        $email_message = "<br />
-        Name: $name<br />
-        Email: $email<br />
-        Phone: $phone<br />
-        Message : $email_content<br />
-        <br />
-        Thank You.";
-
-		wp_mail($to, $subject, $email_message, $headers);
-
+		$list_id = 'f780ed0eff';
+		$notify = (isset($_POST['notification'])) ? 'Yes': 'No';
 		// Let's start by including the MailChimp API wrapper
 		include('includes/MailChimp.php');
 
@@ -59,7 +37,7 @@
 		// For wrapper's doc, visit: https://github.com/drewm/mailchimp-api
 		$result = $MailChimp->put("lists/$list_id/members/".$memberId, [
 			'email_address' => $_POST["email"],
-			'merge_fields'  => ['FNAME'=>$_POST["fname"], 'PHONE'=>$_POST["phone"], 'COMPANY'=>$_POST["company"]],
+			'merge_fields'  => ['FNAME'=>$_POST["name"], 'NOTIFY'=>$notify],
 			'status'        => 'subscribed'
 		]);
 
@@ -70,6 +48,35 @@
 		}
 		die();
 	}
+
+// action for sending to mailchimp
+add_action('wp_ajax_send_contact_info', 'send_contact_info');
+add_action('wp_ajax_nopriv_send_contact_info', 'send_contact_info');
+
+	function send_contact_info() {
+        $to = 'talreznic11@gmail.com';
+        $cc = 'talreznic11@gmail.com';
+        $from = $_POST['email'];
+        $subject = 'Residence New Contact information';
+        $phone = $_POST['phone'];
+        $name = $_POST['name'];
+        $residence = $_POST['residence'];
+
+        $content_type = 'Content-Type: text/html; charset=UTF-8';
+        $headers = array();
+        $headers[] = "From: $from <$from> \r\n";
+        $headers[] = "CC: $cc";
+        $headers[] = $content_type;
+        $email_message = "<br />
+        Name: $name<br />
+        Email: $email<br />
+        Phone: $phone<br />
+        Residence: $residence <br/>
+        <br />
+        Thank You.";
+
+        wp_mail($to, $subject, $email_message, $headers);
+    }
 
 	// Function for detecting mobile version
 	function is_mobile() {

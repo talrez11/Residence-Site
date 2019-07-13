@@ -1,5 +1,9 @@
 jQuery(window).ready(function() {
 	var headerNavigation = jQuery('#menu-main-menu a');
+	var loaderSign = jQuery('#sign div.loader');
+	var loaderContact = jQuery('#contact div.loader');
+	var successResponseNewsletter = '<h4>Thank You!</h4>';
+	var errorMessageNewLetter = '<h4>Sorry something went wrong, please try again!';
 
 	// Detecting mobile devices
 	var isMobile = {
@@ -22,6 +26,62 @@ jQuery(window).ready(function() {
 	        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 	    }
 	};
+
+	jQuery('#sign').on('submit', function(event) {
+		event.preventDefault();
+		loaderSign.addClass('show');
+		var ajax_form_data = jQuery(this).serialize();
+		console.log(ajax_form_data);
+		jQuery.ajax({
+			url: '/wp-admin/admin-ajax.php',
+			type:   'post',
+			data:   ajax_form_data,
+			async: true,
+		}).done (function (response) {
+			console.log(response);
+			jQuery('#sign .response').addClass('show');
+			if(response == 1) {
+				jQuery('#sign .response').html(successResponseNewsletter);
+			} else {
+				jQuery('#sign .response').html(errorMessageNewLetter);
+			}
+			loaderSign.removeClass('show');
+			setTimeout(removeResponseMessage, 5000);
+		});
+	});
+
+	function removeResponseMessage() {
+		jQuery('#sign .response').removeClass('show');
+		jQuery('#sign .response').html(' ');
+	}
+
+	jQuery('#contact').on('submit', function(event) {
+		event.preventDefault();
+		loaderContact.addClass('show');
+		var ajax_form_data = jQuery(this).serialize();
+		console.log(ajax_form_data);
+		jQuery.ajax({
+			url: '/wp-admin/admin-ajax.php',
+			type:   'post',
+			data:   ajax_form_data,
+			async: true,
+		}).done (function (response) {
+			console.log(response);
+			jQuery('#contact .response').addClass('show');
+			if(response == 1) {
+				jQuery('#contact .response').html(successResponseNewsletter);
+			} else {
+				jQuery('#contact .response').html(errorMessageNewLetter);
+			}
+			loaderContact.removeClass('show');
+			setTimeout(removeContactResponseMessage, 5000);
+		});
+	});
+
+	function removeContactResponseMessage() {
+		jQuery('#contact .response').removeClass('show');
+		jQuery('#contact .response').html(' ');
+	}
 
 	if(!isMobile.any()) {
 		// Header gallery
@@ -80,4 +140,6 @@ jQuery(window).ready(function() {
 		var id = jQuery(this).attr('href');
 		jQuery("html, body").animate({ scrollTop: jQuery(id).offset().top - 50}, 1000);
 	});
+
+
 });
