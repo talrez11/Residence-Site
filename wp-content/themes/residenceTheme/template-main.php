@@ -115,4 +115,28 @@
             </ul>
         </div>
     </section>
+
+    <section id="member">
+        <h2>BECOME A MEMBER AND SAVE</h2>
+        <h3>Sign up for our free members program</h3>
+        <form id="sign">
+            <label for="name">
+                <span>Name:</span>
+                <input type="text" id="name" name="name" required="required">
+            </label>
+            <label for="email">
+                <span>Email:</span>
+                <input type="email" id="email" name="email" required="required">
+            </label>
+            <label for="notify">
+                <input type="checkbox" id="notify" name="notification">
+                <span>I agree to recieve email notifications</span>
+            </label>
+            <input type="submit" value="Send">
+            <div class="loader">
+                <img src="<?php echo TEMPLATE_DIR.'/images/loader.apng'?>" alt="loader">
+            </div>
+            <div class="response">REsponse Message</div>
+        </form>
+    </section>
 <?php get_footer(); ?>

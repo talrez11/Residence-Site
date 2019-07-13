@@ -8,6 +8,24 @@
 ?>
 	</div><!-- .site-content -->
 	<footer id="bottom">
+        <h2>Contact Us</h2>
+        <form id="contact">
+            <label for="name">
+                <input type="text" id="name" name="name" placeholder="Name" required="required">
+            </label>
+            <label for="phone">
+                <input type="text" id="phone" name="phone" placeholder="Phone number" required="required">
+            </label>
+            <label for="residence">
+                <select name="residence" id="residence">
+                    <option value="Select Residence" selected="selected">Select Residence</option>
+                    <option value="option one">option one</option>
+                    <option value="option two">option two</option>
+                    <option value="option three">option three</option>
+                </select>
+            </label>
+            <input type="submit" value="Send">
+        </form>
 	</footer><!-- .site-footer -->
 </div><!-- .site -->
 

@@ -32,11 +32,19 @@ section div.gallery img {
     height: auto;
 }
 
+footer,
 #about {
     display: block;
     padding: 2em calc((100% - 1200px)/ 2);
 }
 
+#member {
+    padding: 2em 0em;
+    text-align: center;
+}
+
+footer h2,
+#member h2,
 #recommendation h2,
 #residence h2,
 #about h2 {
@@ -46,6 +54,8 @@ section div.gallery img {
     position: relative;
 }
 
+footer h2:after,
+#member h2:after,
 #recommendation h2:after,
 #residence h2:after,
 #about h2:after {
@@ -162,4 +172,77 @@ button.slick-next.slick-arrow {
     position: absolute;
     bottom: 4em;
     left: 3em;
+}
+
+#member h3 {
+    font-size: 2rem;
+}
+
+#member form {
+    background-color: rgb(224, 224, 224);
+    padding: 3.5em;
+    margin-top: 2em;
+    position: relative;
+}
+
+form label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0em 0.5em;
+}
+
+form label input {
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
+    border-bottom: 3px solid rgb(225, 176, 88);
+    background-color: transparent;
+}
+
+form input[type="submit"] {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0.4em 4em;
+    border: none;
+    -webkit-appearance: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#sign input[type="submit"] {
+    background: rgb(225, 176, 88);
+}
+
+#sign .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+#sign .loader.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#sign .response {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 100;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    visibility: visible;
+}
+
+#sign .response.show {
+    opacity: 1;
+    visibility: visible;
 }
