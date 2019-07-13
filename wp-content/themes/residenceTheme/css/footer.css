@@ -1,0 +1,87 @@
+/*
+    Footer style
+*/
+
+footer {
+    display: block;
+}
+
+footer form {
+    padding: 3.5em;
+    padding-top: 1em;
+    margin-top: 0em;
+    position: relative;
+}
+
+#contact label {
+    display: inline-block;
+    vertical-align: middle;
+    width: 250px;
+}
+
+#contact select,
+#contact label input {
+    padding: 0.7em;
+    background-color: rgb(224, 224, 224);
+    border: none;
+    color: black;
+    width: 100%;
+}
+
+#contact input[type="submit"] {
+    width: 250px;
+    color: white;
+    background-color: black;
+}
+
+#contact .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+#contact .loader.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#contact .response {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 100;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    visibility: visible;
+}
+
+#contact .response.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+footer div {
+    margin-top: 3em;
+    text-align: center;
+}
+
+footer div a {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: underline;
+    color: black;
+    margin: 0em 0.8em;
+}
+
+footer div a img,
+footer div a span {
+    display: inline-block;
+    vertical-align: middle;
+}

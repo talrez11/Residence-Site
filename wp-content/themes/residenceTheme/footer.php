@@ -25,7 +25,22 @@
                 </select>
             </label>
             <input type="submit" value="Send">
+            <div class="loader">
+                <img src="<?php echo TEMPLATE_DIR.'/images/loader.apng'?>" alt="loader">
+            </div>
+            <div class="response">REsponse Message</div>
         </form>
+        <div>
+            <a class='phone' href="tel:972543551095">
+                <img src="<?php echo TEMPLATE_DIR.'/images/icon_2.jpg'?>" alt="phone icon">
+                <span>+972-54-3551095</span>
+            </a>
+
+            <a class='mail' href="mailto:residence@gmail.com">
+                <img src="<?php echo TEMPLATE_DIR.'/images/icon_1.jpg'?>" alt="mail icon">
+                <span>residence@gmail.com</span>
+            </a>
+        </div>
 	</footer><!-- .site-footer -->
 </div><!-- .site -->
 

@@ -6,6 +6,7 @@
  */
 	if(!is_mobile()) {
 		wp_enqueue_style('header', get_stylesheet_directory_uri().'/css/header.css?vn='.THEME_VERSION, array(), true);
+        wp_enqueue_style('footer', get_stylesheet_directory_uri().'/css/footer.css?vn='.THEME_VERSION, array(), true);
 	} else {
 		wp_enqueue_style('header', get_stylesheet_directory_uri().'/css/header_mobile.css?vn='.THEME_VERSION, array(), true);
 	}
