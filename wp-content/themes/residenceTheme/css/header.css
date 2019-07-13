@@ -51,10 +51,9 @@ header div {
 
 header div.social {
     position: absolute;
-    top: 50%;
     right: calc(50% - 600px);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    bottom: 1.5em;
+    top: auto;
 }
 
 header div.social a {
