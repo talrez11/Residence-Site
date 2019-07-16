@@ -109,6 +109,20 @@ jQuery(window).ready(function() {
 
 			});
 		});
+	} else {
+		jQuery('.header').slick({
+			autoplay: true,
+			autoplaySpeed: 2000,
+			pauseOnFocus: false,
+			pauseOnHover: false,
+			fade: true,
+			auto: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: false,
+			adaptiveHeight: true,
+			arrows: false
+		});
 	}
 
 	// control image gallery display
