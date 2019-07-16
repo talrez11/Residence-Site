@@ -14,7 +14,7 @@
         if( have_rows('header_gallery') ):
             while ( have_rows('header_gallery') ) : the_row();
                 $title = get_sub_field('title');
-                $image = get_sub_field('image');
+                $image = is_mobile() ? get_sub_field('image_mobile') : get_sub_field('image');
                 ?>
                 <div class="gallery">
                     <h2><?php echo $title; ?></h2>

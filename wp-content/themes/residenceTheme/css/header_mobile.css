@@ -1,0 +1,40 @@
+
+/*
+    Header mobile style
+*/
+
+header {
+    display: block;
+    text-align: center;
+    position: relative;
+    padding: 0.5em 0em;
+}
+
+header a.logo {
+    display: inline-block;
+    width: 90px;
+}
+
+header a.logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header div.social {
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+}
+
+header div.social a {
+    display: inline-block;
+    margin: 0em 0.1em;
+    width: 22px;
+}
+
+header div.social a img {
+    display: block;
+    width: 100%;
+    height: auto;
+}

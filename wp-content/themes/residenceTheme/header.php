@@ -30,11 +30,13 @@
             </a>
 
             <?php
-                wp_nav_menu( array(
-                    'theme_location' => 'Main Menu',
-                    'item_spacing' => 'discard'
-                    )
-                );
+                if(!is_mobile()) {
+                     wp_nav_menu( array(
+                        'theme_location' => 'Main Menu',
+                        'item_spacing' => 'discard'
+                        )
+                    );
+                }
             ?>
 
             <div class="social">
