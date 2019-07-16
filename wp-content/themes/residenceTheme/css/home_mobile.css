@@ -13,22 +13,139 @@ section div.gallery {
     display: block;
 }
 
-section div.gallery h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background-color: whitesmoke;
-    font-size: 1.5rem;
-    color: black;
-    width: 100%;
-    text-align: center;
-    padding: 0.2em;
-}
-
 section div.gallery img {
     display: block;
     width: 100%;
     height: auto;
+}
+
+footer,
+#about {
+    display: block;
+    padding: 1em 0.5em;
+}
+
+footer h2,
+#member h2,
+#recommendation h2,
+#residence h2,
+#about h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative;
+}
+
+footer h2:after,
+#member h2:after,
+#recommendation h2:after,
+#residence h2:after,
+#about h2:after {
+    content: '';
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.8em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 3px;
+    background-color: #e1b058;
+}
+
+#about p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+#about strong {
+    font-weight: 700;
+    color: #e1b058;
+}
+
+#subject {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#subject li {
+    margin-bottom: 1em;
+}
+
+#subject li a {
+    display: block;
+    border: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+#subject li a img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#image_gallery {
+    position: relative;
+    height: 276px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 85%;
+}
+
+.holder ul {
+    max-height: 0px;
+    visibility: hidden;
+}
+
+.holder ul.show {
+    visibility: visible;
+}
+button.slick-prev.slick-arrow,
+button.slick-next.slick-arrow {
+    background-color: black;
+    top: 140px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+    display: none;
+}
+
+#recommendation div.wrap {
+    background-image: url("/wp-content/themes/residenceTheme/images/recommand_background.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    position: relative;
+    padding: 10em 0em;
+}
+
+#recommendation ul {
+    display: block;
+    position: relative;
+    height: 200px;
+}
+
+#recommendation ul li {
+
+    width: 85%;
+    border-top: 8px solid rgb(225, 176, 88);
+    background-color: rgba(255, 255, 255, 0.79);
+    padding: 3em 3em 5em 3em;
+}
+
+#recommendation ul li p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+#recommendation ul li span {
+    display: block;
+    margin-top: 3em;
+    color: black;
+    font-weight: 700;
+    position: absolute;
+    bottom: 4em;
+    left: 3em;
 }
