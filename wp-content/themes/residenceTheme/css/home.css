@@ -93,20 +93,30 @@ footer h2:after,
     margin-right: auto;
     display: block;
     width: 1268px;
+    left: 15px;
+    max-height: 0;
 }
 
-.holder ul {
+#image_gallery.show {
+    max-height: 340px;
+}
+
+.holder > ul {
     max-height: 0px;
     visibility: hidden;
 }
 
-.holder ul.show {
+.holder > ul.show {
     visibility: visible;
 }
 button.slick-prev.slick-arrow,
 button.slick-next.slick-arrow {
     background-color: black;
     top: 140px;
+}
+
+.slick-next {
+    right: 0px !important;
 }
 
 .slick-prev::before,

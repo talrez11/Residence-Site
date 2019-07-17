@@ -104,6 +104,7 @@ jQuery(window).ready(function() {
 				slidesToShow: 3,
 				slidesToScroll: 1,
 				arrows: true,
+				dots: true,
 				waitForAnimate: true,
 				focusOnSelect: true,
 			});
@@ -145,10 +146,11 @@ jQuery(window).ready(function() {
 	// control image gallery display
 	var subjectImages = jQuery('#subject li');
 	var imagesGallery = jQuery('#image_gallery ul');
-	jQuery('#image_gallery ul.one').addClass('show');
+	//jQuery('#image_gallery ul.one').addClass('show');
 
 	subjectImages.on('click', function() {
 		var galleryNumber = jQuery(this).attr('class');
+		jQuery('#image_gallery').addClass('show');
 		jQuery.each(imagesGallery, function() {
 			var item = jQuery(this);
 			if(item.hasClass(galleryNumber)){
