@@ -124,6 +124,10 @@ button.slick-next.slick-arrow {
     display: none;
 }
 
+#image_gallery .slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
 #recommendation div.wrap {
     background-image: url("/wp-content/themes/residenceTheme/images/recommand_background.jpg");
     background-repeat: no-repeat;
