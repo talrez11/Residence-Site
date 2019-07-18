@@ -103,7 +103,7 @@ jQuery(window).ready(function() {
 			jQuery(this).slick({
 				slidesToShow: 3,
 				slidesToScroll: 1,
-				arrows: true,
+				arrows: false,
 				dots: true,
 				waitForAnimate: true,
 				focusOnSelect: true,

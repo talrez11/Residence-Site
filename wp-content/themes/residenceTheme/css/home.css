@@ -128,6 +128,21 @@ button.slick-next.slick-arrow {
     margin-bottom: 0;
 }
 
+#image_gallery .slick-dots {
+    bottom: -315px;
+}
+
+#image_gallery .slick-dots li {
+    background-color: black;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+#image_gallery .slick-dots li.slick-active {
+    background-color: rgb(225, 176, 88);
+}
+
 #recommendation div.wrap {
     background-image: url("/wp-content/themes/residenceTheme/images/recommand_background.jpg");
     background-repeat: no-repeat;
