@@ -66,6 +66,10 @@ footer h2:after,
     color: #e1b058;
 }
 
+#about a {
+    display: none;
+}
+
 #subject {
     display: flex;
     flex-direction: row;

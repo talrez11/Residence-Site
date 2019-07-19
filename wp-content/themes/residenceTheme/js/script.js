@@ -4,6 +4,8 @@ jQuery(window).ready(function() {
 	var loaderContact = jQuery('#contact div.loader');
 	var successResponseNewsletter = '<h4>Thank You!</h4>';
 	var errorMessageNewLetter = '<h4>Sorry something went wrong, please try again!';
+	var showMoreText = 'Read More';
+	var showLessText = 'Read Less';
 
 	// Detecting mobile devices
 	var isMobile = {
@@ -26,6 +28,18 @@ jQuery(window).ready(function() {
 	        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 	    }
 	};
+
+	//Read more button event
+	jQuery('#more').on('click', function(event) {
+		event.preventDefault();
+		jQuery(this).toggleClass('show');
+		jQuery('#about p').toggleClass('show');
+		if(jQuery(this).hasClass('show')) {
+			jQuery(this).text(showLessText);
+		} else {
+			jQuery(this).text(showMoreText);
+		}
+	});
 
 	jQuery('#sign').on('submit', function(event) {
 		event.preventDefault();
@@ -106,11 +120,14 @@ jQuery(window).ready(function() {
 			arrows: false
 		});
 
+		jQuery('#image_gallery ul.one').addClass('show');
+
 		jQuery.each(jQuery('#image_gallery ul'), function() {
 			jQuery(this).slick({
 				slidesToShow: 1,
 				slidesToScroll: 1,
-				arrows: true,
+				arrows: false,
+				dots: true,
 				waitForAnimate: true,
 				focusOnSelect: true
 			});
@@ -128,7 +145,6 @@ jQuery(window).ready(function() {
 	// control image gallery display
 	var subjectImages = jQuery('#subject li');
 	var imagesGallery = jQuery('#image_gallery ul');
-	//jQuery('#image_gallery ul.one').addClass('show');
 
 	subjectImages.on('click', function() {
 		var galleryNumber = jQuery(this).attr('class');

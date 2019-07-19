@@ -55,6 +55,15 @@ footer h2:after,
 #about p {
     font-size: 16px;
     line-height: 1.8;
+    display: none;
+}
+
+#about p.show {
+    display: block;
+}
+
+#about p:first-of-type {
+    display: block;
 }
 
 #about strong {
@@ -62,14 +71,21 @@ footer h2:after,
     color: #e1b058;
 }
 
+#about a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #e1b058;
+}
+
+#residence {
+    padding-bottom: 80px;
+}
+
 #subject {
     padding: 1em;
     display: flex;
-    flex-direction: column;
-}
-
-#subject li {
-    margin-bottom: 1em;
+    flex-direction: row;
 }
 
 #subject li a {
@@ -93,14 +109,19 @@ footer h2:after,
     width: 85%;
 }
 
-.holder ul {
+.holder > ul {
     max-height: 0px;
     visibility: hidden;
 }
 
-.holder ul.show {
+.holder > ul.show {
     visibility: visible;
 }
+
+#image_gallery .slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
 button.slick-prev.slick-arrow,
 button.slick-next.slick-arrow {
     background-color: black;
@@ -110,6 +131,21 @@ button.slick-next.slick-arrow {
 .slick-prev::before,
 .slick-next::before {
     display: none;
+}
+
+#image_gallery .slick-dots {
+    bottom: -315px;
+}
+
+#image_gallery .slick-dots li {
+    background-color: black;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+#image_gallery .slick-dots li.slick-active {
+    background-color: rgb(225, 176, 88);
 }
 
 #recommendation div.wrap {
