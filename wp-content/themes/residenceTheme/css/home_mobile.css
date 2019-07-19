@@ -208,20 +208,18 @@ button.slick-next.slick-arrow {
 }
 
 #member h2 {
-    padding: 0.5em 0em;
+    padding: 1em 0em;
     font-size: 1.4rem;
 }
 
-#member h3 {
-    text-align: center;
-    font-size: 1rem;
-    margin-top: -0.8em;
+#member h2:after {
+    margin-bottom: 0.5em;
 }
 
 #member form {
     background-color: rgb(224, 224, 224);
-    padding: 3.5em;
-    margin-top: 2em;
+    padding: 1em;
+    margin-top: 0em;
     position: relative;
 }
 
@@ -231,17 +229,34 @@ form label {
     margin-bottom: 1em;
 }
 
+form label span {
+    display: block;
+}
+
+form label select,
 form label input {
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
     border: none;
     border-bottom: 3px solid rgb(225, 176, 88);
     background-color: transparent;
+    width: 100%;
+    padding: 0.5em;
+}
+
+form label.notify span,
+form label.notify input {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+form label.notify input {
+    width: 20px;
 }
 
 form input[type="submit"] {
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0.4em 4em;
     border: none;
     -webkit-appearance: none;

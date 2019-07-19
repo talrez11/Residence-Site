@@ -135,9 +135,9 @@
                 <span>Phone Number:</span>
                 <input type="text" id="phone" name="phone" required="required">
             </label>
-            <label for="residence">
+            <label for="residence-member">
                 <span>Select Residence:</span>
-                <select name="residence" id="residence">
+                <select name="residence" id="residence-member">
                     <option value="option one">option one</option>
                     <option value="option two">option two</option>
                     <option value="option three">option three</option>
