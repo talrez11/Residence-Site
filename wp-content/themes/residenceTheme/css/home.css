@@ -204,23 +204,40 @@ button.slick-next.slick-arrow {
 
 #member form {
     background-color: rgb(224, 224, 224);
-    padding: 3.5em;
+    padding: 3.5em calc((100% - 600px)/ 2);
     margin-top: 2em;
     position: relative;
 }
 
 form label {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0em 0.5em;
+    display: block;
+    margin: 1em 0em;
+    text-align: left;
 }
 
+form label span {
+    display: block;
+    text-align: left;
+}
+
+form label select,
 form label input {
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
     border: none;
     border-bottom: 3px solid rgb(225, 176, 88);
     background-color: transparent;
+    width: 100%;
+    padding: 0.7em 0.5em;
+}
+
+form label.notify span,
+form label.notify input {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+form label.notify input {
+    width: 20px;
 }
 
 form input[type="submit"] {

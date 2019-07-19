@@ -120,8 +120,7 @@
     </section>
 
     <section id="member">
-        <h2>BECOME A MEMBER AND SAVE</h2>
-        <h3>Sign up for our free members program</h3>
+        <h2>Contact Us & Become a member</h2>
         <form id="sign">
             <input type="hidden" name="action" value="send_to_mailchimp">
             <label for="name">
@@ -132,7 +131,19 @@
                 <span>Email:</span>
                 <input type="email" id="email" name="email" required="required">
             </label>
-            <label for="notify">
+            <label for="phone">
+                <span>Email:</span>
+                <input type="text" id="phone" name="phone" required="required">
+            </label>
+            <label for="residence">
+                <span>Select Residence:</span>
+                <select name="residence" id="residence">
+                    <option value="option one">option one</option>
+                    <option value="option two">option two</option>
+                    <option value="option three">option three</option>
+                </select>
+            </label>
+            <label for="notify" class="notify">
                 <input type="checkbox" id="notify" name="notification">
                 <span>I agree to recieve email notifications</span>
             </label>

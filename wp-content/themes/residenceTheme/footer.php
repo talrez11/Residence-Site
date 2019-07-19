@@ -8,29 +8,6 @@
 ?>
 	</div><!-- .site-content -->
 	<footer id="bottom">
-        <h2>Contact Us</h2>
-        <form id="contact">
-            <input type="hidden" name="action" value="send_contact_info">
-            <label for="name">
-                <input type="text" id="name" name="name" placeholder="Name" required="required">
-            </label>
-            <label for="phone">
-                <input type="text" id="phone" name="phone" placeholder="Phone number" required="required">
-            </label>
-            <label for="residence">
-                <select name="residence" id="residence">
-                    <option value="Select Residence" selected="selected">Select Residence</option>
-                    <option value="option one">option one</option>
-                    <option value="option two">option two</option>
-                    <option value="option three">option three</option>
-                </select>
-            </label>
-            <input type="submit" value="Send">
-            <div class="loader">
-                <img src="<?php echo TEMPLATE_DIR.'/images/loader.apng'?>" alt="loader">
-            </div>
-            <div class="response">REsponse Message</div>
-        </form>
         <div>
             <a class='phone' href="tel:972543551095">
                 <img src="<?php echo TEMPLATE_DIR.'/images/icon_2.jpg'?>" alt="phone icon">
