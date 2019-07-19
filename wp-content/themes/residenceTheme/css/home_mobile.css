@@ -154,32 +154,53 @@ button.slick-next.slick-arrow {
     background-position: center top;
     background-size: cover;
     position: relative;
-    padding: 10em 0em;
+    padding: 2em 0em;
 }
 
-#recommendation ul {
-
+#recommendation div#recommend {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-#recommendation ul li {
-
-    width: 85%;
+#recommendation div#recommend article {
+    position: absolute;
     border-top: 8px solid rgb(225, 176, 88);
     background-color: rgba(255, 255, 255, 0.79);
-    padding: 3em 3em 5em 3em;
+    padding: 2em 3em 5em 3em;
+    position: relative;
+    min-height: 400px;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
-#recommendation ul li p {
-    font-size: 16px;
+#recommendation div#recommend article p {
+    font-size: 1rem;
     line-height: 1.8;
 }
 
-#recommendation ul li span {
+#recommendation div#recommend article span {
     display: block;
     margin-top: 3em;
     color: black;
     font-weight: 700;
     position: absolute;
+    bottom: 4em;
+    left: 3em;
+}
+
+#recommendation div#recommend .slick-dots li {
+    background-color: white;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+#recommendation div#recommend .slick-dots li.slick-active {
+    background-color: rgb(225, 176, 88);
 }
 
 #member {

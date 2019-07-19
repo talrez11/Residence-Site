@@ -136,7 +136,8 @@ jQuery(window).ready(function() {
 		jQuery('#recommend').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			arrows: true,
+			arrows: false,
+			dots: true,
 			waitForAnimate: true,
 			focusOnSelect: true
 		});
