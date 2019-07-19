@@ -98,24 +98,24 @@
     <section id="recommendation">
         <h2>Recommendation</h2>
         <div class="wrap">
-            <ul id="recommend">
+            <div id="recommend">
                 <?php
                 if( have_rows('recommendation') ):
                     while ( have_rows('recommendation') ) : the_row();
                         $name = get_sub_field('name');
                         $description = get_sub_field('description');
                         ?>
-                        <li class="<?php echo $title; ?>">
+                        <article class="<?php echo $title; ?>">
                             <div class="text">
                                 <?php echo $description; ?>
                                 <span><?php echo $name; ?></span>
                             </div>
-                        </li>
+                        </article>
                     <?php endwhile;
                 else :
                 endif;
                 ?>
-            </ul>
+            </div>
         </div>
     </section>
 

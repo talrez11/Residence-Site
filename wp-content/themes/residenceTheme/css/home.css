@@ -135,8 +135,8 @@ button.slick-next.slick-arrow {
 #image_gallery .slick-dots li {
     background-color: black;
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
 }
 
 #image_gallery .slick-dots li.slick-active {
@@ -149,20 +149,18 @@ button.slick-next.slick-arrow {
     background-position: center top;
     background-size: cover;
     position: relative;
-    padding: 10em 0em;
+    padding: 10em calc((100% - 1200px)/ 2);
 }
 
-#recommendation ul {
+#recommendation div#recommend {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#recommendation ul li {
-    display: inline-block;
-    vertical-align: top;
-    width: 410px;
+#recommendation div#recommend article {
+    position: absolute;
     border-top: 8px solid rgb(225, 176, 88);
     background-color: rgba(255, 255, 255, 0.79);
     padding: 3em 3em 5em 3em;
@@ -174,12 +172,12 @@ button.slick-next.slick-arrow {
     margin-bottom: 1em;
 }
 
-#recommendation ul li p {
+#recommendation div#recommend article p {
     font-size: 1.1rem;
     line-height: 1.8;
 }
 
-#recommendation ul li span {
+#recommendation div#recommend article span {
     display: block;
     margin-top: 3em;
     color: black;
@@ -187,6 +185,17 @@ button.slick-next.slick-arrow {
     position: absolute;
     bottom: 4em;
     left: 3em;
+}
+
+#recommendation div#recommend .slick-dots li {
+    background-color: white;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+#recommendation div#recommend .slick-dots li.slick-active {
+    background-color: rgb(225, 176, 88);
 }
 
 #member h3 {

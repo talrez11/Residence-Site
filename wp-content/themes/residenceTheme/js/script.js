@@ -109,6 +109,16 @@ jQuery(window).ready(function() {
 				focusOnSelect: true,
 			});
 		});
+
+		jQuery('#recommend').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: true,
+			waitForAnimate: true,
+			focusOnSelect: true,
+		});
+
 	} else if(isMobile.any()) {
 		jQuery('.header').slick({
 			autoplay: true,
