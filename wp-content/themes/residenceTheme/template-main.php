@@ -120,7 +120,7 @@
     </section>
 
     <section id="member">
-        <h2>Contact Us & Become a member</h2>
+        <h2>Contact Us & Become a Member</h2>
         <form id="sign">
             <input type="hidden" name="action" value="send_to_mailchimp">
             <label for="name">
@@ -132,7 +132,7 @@
                 <input type="email" id="email" name="email" required="required">
             </label>
             <label for="phone">
-                <span>Email:</span>
+                <span>Phone Number:</span>
                 <input type="text" id="phone" name="phone" required="required">
             </label>
             <label for="residence">

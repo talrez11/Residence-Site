@@ -55,34 +55,6 @@ jQuery(window).ready(function() {
 		jQuery('#sign .response').html(' ');
 	}
 
-	jQuery('#contact').on('submit', function(event) {
-		event.preventDefault();
-		loaderContact.addClass('show');
-		var ajax_form_data = jQuery(this).serialize();
-		console.log(ajax_form_data);
-		jQuery.ajax({
-			url: '/wp-admin/admin-ajax.php',
-			type:   'post',
-			data:   ajax_form_data,
-			async: true,
-		}).done (function (response) {
-			console.log(response);
-			jQuery('#contact .response').addClass('show');
-			if(response == 1) {
-				jQuery('#contact .response').html(successResponseNewsletter);
-			} else {
-				jQuery('#contact .response').html(errorMessageNewLetter);
-			}
-			loaderContact.removeClass('show');
-			setTimeout(removeContactResponseMessage, 5000);
-		});
-	});
-
-	function removeContactResponseMessage() {
-		jQuery('#contact .response').removeClass('show');
-		jQuery('#contact .response').html(' ');
-	}
-
 	if(!isMobile.any()) {
 		// Header gallery
 		jQuery('.header').slick({

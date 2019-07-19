@@ -25,6 +25,13 @@
 		// Put your MailChimp API and List ID hehe
 		$api_key = MAILCHIMP_API;
 		$list_id = 'f780ed0eff';
+        $to = 'talreznic11@gmail.com';
+        $cc = 'talreznic11@gmail.com';
+        $from = $_POST['email'];
+        $subject = 'Residence New Contact information';
+        $phone = $_POST['phone'];
+        $name = $_POST['name'];
+        $residence = $_POST['residence'];
 		$notify = (isset($_POST['notification'])) ? 'Yes': 'No';
 		// Let's start by including the MailChimp API wrapper
 		include('includes/MailChimp.php');
@@ -41,27 +48,6 @@
 			'status'        => 'subscribed'
 		]);
 
-		if ($MailChimp->success()) {
-			echo 1;
-		} else {
-			echo $MailChimp->getLastError();
-		}
-		die();
-	}
-
-// action for sending to mailchimp
-add_action('wp_ajax_send_contact_info', 'send_contact_info');
-add_action('wp_ajax_nopriv_send_contact_info', 'send_contact_info');
-
-	function send_contact_info() {
-        $to = 'talreznic11@gmail.com';
-        $cc = 'talreznic11@gmail.com';
-        $from = $_POST['email'];
-        $subject = 'Residence New Contact information';
-        $phone = $_POST['phone'];
-        $name = $_POST['name'];
-        $residence = $_POST['residence'];
-
         $content_type = 'Content-Type: text/html; charset=UTF-8';
         $headers = array();
         $headers[] = "From: $from <$from> \r\n";
@@ -76,7 +62,14 @@ add_action('wp_ajax_nopriv_send_contact_info', 'send_contact_info');
         Thank You.";
 
         wp_mail($to, $subject, $email_message, $headers);
-    }
+
+		if ($MailChimp->success()) {
+			echo 1;
+		} else {
+			echo $MailChimp->getLastError();
+		}
+		die();
+	}
 
 	// Function for detecting mobile version
 	function is_mobile() {
