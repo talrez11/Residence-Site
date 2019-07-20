@@ -73,7 +73,7 @@ jQuery(window).ready(function() {
 		// Header gallery
 		jQuery('.header').slick({
 			autoplay: true,
-			autoplaySpeed: 2000,
+			autoplaySpeed: 5000,
 			pauseOnFocus: false,
 			pauseOnHover: false,
 			fade: true,
@@ -108,7 +108,7 @@ jQuery(window).ready(function() {
 	} else if(isMobile.any()) {
 		jQuery('.header').slick({
 			autoplay: true,
-			autoplaySpeed: 2000,
+			autoplaySpeed: 5000,
 			pauseOnFocus: false,
 			pauseOnHover: false,
 			fade: true,

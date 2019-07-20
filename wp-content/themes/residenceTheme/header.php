@@ -41,11 +41,11 @@
             ?>
 
             <div class="social">
-                <a class='facebook' href="/">
+                <a class='facebook' href="/" target="_blank">
                     <img src="<?php echo TEMPLATE_DIR.'/images/facebook.jpg'?>" alt="facebook">
                 </a>
 
-                <a class='instagram' href="/">
+                <a class='instagram' href="<?php echo INSTAGRAM_URL; ?>" target="_blank">
                     <img src="<?php echo TEMPLATE_DIR.'/images/instagram.jpg'?>" alt="instagram">
                 </a>
             </div>
