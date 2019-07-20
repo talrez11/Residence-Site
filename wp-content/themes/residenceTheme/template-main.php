@@ -58,6 +58,7 @@
                     <li class="<?php echo $title; ?>">
                         <a href="javascript:void(0);">
                             <img src="<?php echo $subjectImage; ?>" alt="<?php echo $title; ?>">
+                            <span>Click to show portfolio</span>
                         </a>
                     </li>
                 <?php endwhile;
@@ -81,6 +82,7 @@
                                     ?>
                                     <li>
                                         <img src="<?php echo $image; ?>" alt="">
+                                        <span class="title"><?php echo $title; ?></span>
                                     </li>
                                 <?php endwhile;
                             else :

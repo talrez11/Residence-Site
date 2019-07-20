@@ -80,12 +80,32 @@ footer h2:after,
 
 #subject > li {
     width: 32%;
+    position: relative;
 }
 
 #subject li a {
     display: block;
     border: 3px solid transparent;
-    transition: all 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+#subject > li a span {
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 1.3em;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    transition: all 0.6s;
+}
+
+#subject li a:hover span {
+    top: 50%;
 }
 
 #subject li a img {
@@ -116,6 +136,26 @@ footer h2:after,
 
 .holder > ul.show {
     visibility: visible;
+}
+
+.holder > ul li {
+    position: relative;
+}
+
+.holder > ul li img {
+    width: 95%;
+}
+
+.holder > ul li span.title {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 95%;
+    padding: 0.4em 0em;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    transition: all 0.6s;
 }
 button.slick-prev.slick-arrow,
 button.slick-next.slick-arrow {
