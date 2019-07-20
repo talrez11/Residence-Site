@@ -38,3 +38,20 @@ header div.social a img {
     width: 100%;
     height: auto;
 }
+
+a#phone {
+    position: fixed;
+    top: 2em;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-image: url('/wp-content/themes/residenceTheme/images/icon_2.jpg');
+    background-repeat: no-repeat;
+    background-position: 4px center;
+    background-size: 21px 22px;
+    width: 40px;
+    height: 40px;
+    padding: 1em 1em 1em 1em;
+    z-index: 100000000000;
+    border-radius: 0 50% 50% 0;
+    border: 1px solid rgb(225, 176, 88);
+}

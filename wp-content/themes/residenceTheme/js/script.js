@@ -120,7 +120,7 @@ jQuery(window).ready(function() {
 			arrows: false
 		});
 
-		jQuery('#image_gallery ul.one').addClass('show');
+		jQuery('#image_gallery ul').first().addClass('show');
 
 		jQuery.each(jQuery('#image_gallery ul'), function() {
 			jQuery(this).slick({

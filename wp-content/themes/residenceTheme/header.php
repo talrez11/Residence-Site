@@ -49,4 +49,8 @@
                     <img src="<?php echo TEMPLATE_DIR.'/images/instagram.jpg'?>" alt="instagram">
                 </a>
             </div>
+            
+            <?php if(is_mobile()) { ?>
+                <a href="tel:972543551095" id="phone"></a>
+            <?php } ?>
         </header><!-- .site-header -->
