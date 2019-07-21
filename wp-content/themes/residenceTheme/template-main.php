@@ -48,31 +48,39 @@
 
     <section id="residence">
         <h2>Our Residence</h2>
-        <ul id="subject">
-            <?php
-            if( have_rows('gallery') ):
-                while ( have_rows('gallery') ) : the_row();
-                    $title = get_sub_field('title');
-                    $subjectImage = get_sub_field('subject_image');
-                    ?>
-                    <li class="<?php echo $title; ?>">
-                        <a href="javascript:void(0);">
-                            <img src="<?php echo $subjectImage; ?>" alt="<?php echo $title; ?>">
-                            <span>Click to show portfolio</span>
-                        </a>
-                    </li>
-                <?php endwhile;
-            else :
-            endif;
-            ?>
-        </ul>
+        <?php if(!is_mobile()) { ?>
+            <ul id="subject">
+                <?php
+                if( have_rows('gallery') ):
+                    while ( have_rows('gallery') ) : the_row();
+                        $title = get_sub_field('title');
+                        $subjectImage = get_sub_field('subject_image');
+                        ?>
+                        <li class="<?php echo $title; ?>">
+                            <a href="javascript:void(0);">
+                                <img src="<?php echo $subjectImage; ?>" alt="<?php echo $title; ?>">
+                                <span>Click to show portfolio</span>
+                            </a>
+                        </li>
+                    <?php endwhile;
+                else :
+                endif;
+                ?>
+            </ul>
+        <?php } ?>
 
         <div id="image_gallery">
             <?php
             if( have_rows('gallery') ):
+            else :
+            endif;
                 while ( have_rows('gallery') ) : the_row();
-                    $title = get_sub_field('title');
+                        $title = get_sub_field('title');
+                        $logo = get_sub_field('logo');
                     ?>
+                    <?php if(is_mobile()) { ?>
+                        <img class='logo' src="<?php echo $logo; ?>" alt="<?php echo $title; ?>">
+                    <?php } ?>
                     <div class="holder <?php echo $title;?>">
                         <ul class="images <?php echo $title; ?>">
                             <?php
@@ -91,8 +99,6 @@
                         </ul>
                     </div>
                 <?php endwhile;
-            else :
-            endif;
             ?>
         </div>
     </section>
