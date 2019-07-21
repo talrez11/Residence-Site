@@ -144,7 +144,7 @@ footer h2:after,
 }
 
 .holder > ul li img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .holder > ul li span.title {
