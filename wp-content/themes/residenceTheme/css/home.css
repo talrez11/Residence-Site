@@ -66,6 +66,16 @@ footer h2:after,
     color: #e1b058;
 }
 
+#about ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#about ul li {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
 #about a {
     display: none;
 }
