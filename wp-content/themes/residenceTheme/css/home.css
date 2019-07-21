@@ -270,9 +270,12 @@ form label span {
 
 form label select,
 form label input {
-    display: block;
+    isplay: block;
     border: none;
-    border-bottom: 3px solid rgb(225, 176, 88);
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-bottom: 1px solid rgba(225, 176, 88, 0.55);
     background-color: transparent;
     width: 100%;
     padding: 0.7em 0.5em;
