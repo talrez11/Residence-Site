@@ -55,7 +55,7 @@
         $headers[] = $content_type;
         $email_message = "<br />
         Name: $name<br />
-        Email: $email<br />
+        Email: $from<br />
         Phone: $phone<br />
         Residence: $residence <br/>
         <br />
