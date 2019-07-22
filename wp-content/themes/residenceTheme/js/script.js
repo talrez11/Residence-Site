@@ -3,7 +3,7 @@ jQuery(window).ready(function() {
 	var loaderSign = jQuery('#sign div.loader');
 	var loaderContact = jQuery('#contact div.loader');
 	var successResponseNewsletter = '<h4>Thank You!</h4>';
-	var errorMessageNewLetter = '<h4>Sorry something went wrong, please try again!';
+	var errorMessageNewLetter = '<h4>Email not valid!';
 	var showMoreText = 'Read More';
 	var showLessText = 'Read Less';
 

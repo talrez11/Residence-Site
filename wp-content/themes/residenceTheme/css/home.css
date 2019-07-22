@@ -333,15 +333,21 @@ form input[type="submit"] {
 
 #sign .response {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: white;
+    left: 50%;
+    top: 50%;
+    width: 600px;
+    background-color: rgba(0, 0, 0, 0.71);
     z-index: 100;
     font-weight: 700;
     text-align: center;
     opacity: 0;
-    visibility: visible;
+    visibility: hidden;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    padding: 1em;
+    transform: translate(-50%, -50%);
+    padding-top: 200px;
+    font-size: 2rem;
 }
 
 #sign .response.show {
