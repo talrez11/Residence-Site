@@ -5,6 +5,8 @@
     } else {
         wp_enqueue_style('home-page', get_stylesheet_directory_uri().'/css/home.css?vn='.THEME_VERSION, array(), true);
     }
+    wp_enqueue_style('lity-css', TEMPLATE_DIR.'/css/lity.min.css', array(), THEME_VERSION); // Lity lightbox
+    wp_enqueue_script('lity-js', TEMPLATE_DIR.'/js/lity.min.js', array('jquery'), THEME_VERSION, true );
     wp_enqueue_script('slick-script', get_stylesheet_directory_uri().'/js/slick.min.js', array('jquery'), true);
     wp_enqueue_style('slick-theme-style', get_stylesheet_directory_uri().'/css/slick-theme.css', array(), true);
     wp_enqueue_style('slick-style', get_stylesheet_directory_uri().'/css/slick.css', array(), true);
@@ -89,8 +91,9 @@
                                     $image = get_sub_field('image');
                                     ?>
                                     <li>
-                                        <img src="<?php echo $image; ?>" alt="">
-                                        <span class="title"><?php echo $title; ?></span>
+                                        <a href="<?php echo $image; ?>" style="background-image: url('<?php echo $image; ?>');" data-lity>
+                                            <span class="title"><?php echo $title; ?></span>
+                                        </a>
                                     </li>
                                 <?php endwhile;
                             else :

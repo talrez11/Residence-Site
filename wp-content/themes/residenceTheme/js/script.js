@@ -91,8 +91,8 @@ jQuery(window).ready(function() {
 				slidesToScroll: 1,
 				arrows: false,
 				dots: true,
-				waitForAnimate: true,
-				focusOnSelect: true,
+				waitForAnimate: false,
+				focusOnSelect: false
 			});
 		});
 
