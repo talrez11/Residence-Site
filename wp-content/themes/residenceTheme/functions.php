@@ -73,7 +73,7 @@
 	}
 
 	// Function for detecting mobile version
-    add_action( 'init', 'is_mobile' );
+    add_action( 'after_setup_theme', 'is_mobile' );
 	function is_mobile() {
 		$detect = new Mobile_Detect;
 
