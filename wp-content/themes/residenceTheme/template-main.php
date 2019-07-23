@@ -2,7 +2,7 @@
 //Template Name: Residence HP
     function late_load() {
         if(is_mobile()) {
-            wp_enqueue_style('home-page', get_stylesheet_directory_uri().'/css/home_mobile.css?vn='.THEME_VERSION, array(), true);
+            wp_enqueue_style('home-page-mobile', get_stylesheet_directory_uri().'/css/home_mobile.css?vn='.THEME_VERSION, array(), true);
         } else if(!is_mobile()) {
             wp_enqueue_style('home-page', get_stylesheet_directory_uri().'/css/home.css?vn='.THEME_VERSION, array(), true);
         }

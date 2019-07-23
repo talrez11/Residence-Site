@@ -13,7 +13,6 @@
         if( $detect->isMobile() && !$detect->isTablet() ){
             return true;
         }
-        return false;
     }
 
 	// Add featured image support
