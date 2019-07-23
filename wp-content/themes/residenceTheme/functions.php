@@ -1,6 +1,6 @@
 <?php
 	// Mobile detect class
-    define('THEME_VERSION', '1.5');
+    define('THEME_VERSION', '1.6');
 	include_once 'includes/Mobile_Detect.php';
 	include_once 'includes/env.php';
 
