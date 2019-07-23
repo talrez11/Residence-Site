@@ -1,16 +1,20 @@
 <?php
 //Template Name: Residence HP
-    if(is_mobile()) {
-        wp_enqueue_style('home-page', get_stylesheet_directory_uri().'/css/home_mobile.css?vn='.THEME_VERSION, array(), true);
-    } else if(!is_mobile()) {
-        wp_enqueue_style('home-page', get_stylesheet_directory_uri().'/css/home.css?vn='.THEME_VERSION, array(), true);
+    function late_load() {
+        if(is_mobile()) {
+            wp_enqueue_style('home-page', get_stylesheet_directory_uri().'/css/home_mobile.css?vn='.THEME_VERSION, array(), true);
+        } else if(!is_mobile()) {
+            wp_enqueue_style('home-page', get_stylesheet_directory_uri().'/css/home.css?vn='.THEME_VERSION, array(), true);
+        }
+        wp_enqueue_style('lity-css', TEMPLATE_DIR.'/css/lity.min.css', array(), THEME_VERSION); // Lity lightbox
+        wp_enqueue_script('lity-js', TEMPLATE_DIR.'/js/lity.min.js', array('jquery'), THEME_VERSION, true );
+        wp_enqueue_script('slick-script', get_stylesheet_directory_uri().'/js/slick.min.js', array('jquery'), true);
+        wp_enqueue_style('slick-theme-style', get_stylesheet_directory_uri().'/css/slick-theme.css', array(), true);
+        wp_enqueue_style('slick-style', get_stylesheet_directory_uri().'/css/slick.css', array(), true);
+        wp_enqueue_script('script', get_stylesheet_directory_uri().'/js/script.js?vn='.THEME_VERSION, array('jquery'), true);
     }
-    wp_enqueue_style('lity-css', TEMPLATE_DIR.'/css/lity.min.css', array(), THEME_VERSION); // Lity lightbox
-    wp_enqueue_script('lity-js', TEMPLATE_DIR.'/js/lity.min.js', array('jquery'), THEME_VERSION, true );
-    wp_enqueue_script('slick-script', get_stylesheet_directory_uri().'/js/slick.min.js', array('jquery'), true);
-    wp_enqueue_style('slick-theme-style', get_stylesheet_directory_uri().'/css/slick-theme.css', array(), true);
-    wp_enqueue_style('slick-style', get_stylesheet_directory_uri().'/css/slick.css', array(), true);
-    wp_enqueue_script('script', get_stylesheet_directory_uri().'/js/script.js?vn='.THEME_VERSION, array('jquery'), true);
+
+    add_action('wp_footer', 'late_load');
 
 ?>
 

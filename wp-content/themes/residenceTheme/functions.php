@@ -1,8 +1,20 @@
 <?php
 	// Mobile detect class
-    define('THEME_VERSION', '1.8');
 	include_once 'includes/Mobile_Detect.php';
 	include_once 'includes/env.php';
+
+    define('THEME_VERSION', '1.8');
+
+// Function for detecting mobile version
+    function is_mobile() {
+        $detect = new Mobile_Detect;
+
+        // Exclude tablets.
+        if( $detect->isMobile() && !$detect->isTablet() ){
+            return true;
+        }
+        return false;
+    }
 
 	// Add featured image support
 	add_theme_support( 'post-thumbnails' );
@@ -70,17 +82,6 @@
 			echo $MailChimp->getLastError();
 		}
 		die();
-	}
-
-	// Function for detecting mobile version
-    add_action( 'after_setup_theme', 'is_mobile' );
-	function is_mobile() {
-		$detect = new Mobile_Detect;
-
-		// Exclude tablets.
-		if( $detect->isMobile() && !$detect->isTablet() ){
-		 	return true;
-		}
 	}
 
     //	Allow SVG uploads
