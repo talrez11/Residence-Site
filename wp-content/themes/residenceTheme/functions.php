@@ -55,7 +55,7 @@
 		// For wrapper's doc, visit: https://github.com/drewm/mailchimp-api
 		$result = $MailChimp->put("lists/$list_id/members/".$memberId, [
 			'email_address' => $_POST["email"],
-			'merge_fields'  => ['FNAME'=>$_POST["name"], 'NOTIFY'=>$notify],
+			'merge_fields'  => ['FNAME'=>$_POST["name"], 'NOTIFY'=>$notify, 'PHONE'=> $phone],
 			'status'        => 'subscribed'
 		]);
 
@@ -63,6 +63,7 @@
         $headers = array();
         $headers[] = "From: $from <$from> \r\n";
         $headers[] = "CC: $cc";
+        $headers[]   = "Reply-To: <$email>";
         $headers[] = $content_type;
         $email_message = "<br />
         Name: $name<br />
