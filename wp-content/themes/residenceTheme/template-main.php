@@ -153,9 +153,16 @@
             <label for="residence-member">
                 <span>Select Residence:</span>
                 <select name="residence" id="residence-member">
-                    <option value="option one">option one</option>
-                    <option value="option two">option two</option>
-                    <option value="option three">option three</option>
+                <?php
+                    if( have_rows('gallery') ):
+                        while ( have_rows('gallery') ) : the_row();
+                            $title = get_sub_field('title');
+                            ?>
+                            <option value="<?php echo $title; ?>"><?php echo $title; ?></option>
+                        <?php endwhile;
+                    else :
+                    endif;
+                    ?>
                 </select>
             </label>
             <label for="notify" class="notify">
