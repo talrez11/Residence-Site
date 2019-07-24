@@ -43,6 +43,7 @@
         $name = $_POST['name'];
         $residence = $_POST['residence'];
 		$notify = (isset($_POST['notification'])) ? 'Yes': 'No';
+		$email = $_POST['email'];
 		// Let's start by including the MailChimp API wrapper
 		include('includes/MailChimp.php');
 
@@ -65,7 +66,7 @@
         $headers[] = $content_type;
         $email_message = "<br />
         Name: $name<br />
-        Email: $from<br />
+        Email: $email <br />
         Phone: $phone<br />
         Residence: $residence <br/>
         <br />
