@@ -37,7 +37,7 @@
 		$list_id = 'fc06c6e855';
         $to = array('talreznic11@gmail.com', 'residence@gmail.com');
         $cc = 'talreznic11@gmail.com';
-        $from = $_POST['email'];
+        $from = 'info@tlvresidence.com';
         $subject = 'Residence New Contact information';
         $phone = $_POST['phone'];
         $name = $_POST['name'];
