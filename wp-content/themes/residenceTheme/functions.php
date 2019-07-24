@@ -35,7 +35,7 @@
 		// Put your MailChimp API and List ID hehe
 		$api_key = MAILCHIMP_API;
 		$list_id = 'fc06c6e855';
-        $to = array('talreznic11@gmail.com', 'residence@gmail.com');
+        $to = array('talreznic11@gmail.com', 'info@tlvresidence.com');
         $cc = 'talreznic11@gmail.com';
         $from = 'info@tlvresidence.com';
         $subject = 'Residence New Contact information';

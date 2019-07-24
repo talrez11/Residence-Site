@@ -14,9 +14,9 @@
                 <span>+972-54-3551095</span>
             </a>
 
-            <a class='mail' href="mailto:residence@gmail.com">
+            <a class='mail' href="mailto:info@tlvresidence.com">
                 <img src="<?php echo TEMPLATE_DIR.'/images/icon_1.jpg'?>" alt="mail icon">
-                <span>residence@gmail.com</span>
+                <span>info@tlvresidence.com</span>
             </a>
         </div>
 	</footer><!-- .site-footer -->
