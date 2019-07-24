@@ -34,7 +34,7 @@
 	function send_to_mailchimp() {
 		// Put your MailChimp API and List ID hehe
 		$api_key = MAILCHIMP_API;
-		$list_id = 'f780ed0eff';
+		$list_id = 'fc06c6e855';
         $to = 'talreznic11@gmail.com';
         $cc = 'talreznic11@gmail.com';
         $from = $_POST['email'];
