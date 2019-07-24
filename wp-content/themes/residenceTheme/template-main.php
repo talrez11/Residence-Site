@@ -1,9 +1,9 @@
 <?php
 //Template Name: Residence HP
     function late_load() {
-        if(is_mobile()) {
+        if(rs_is_mobile()) {
             wp_enqueue_style('home-page-mobile', get_stylesheet_directory_uri().'/css/home_mobile.css?vn='.THEME_VERSION, array(), true);
-        } else if(!is_mobile()) {
+        } else if(!rs_is_mobile()) {
             wp_enqueue_style('home-page', get_stylesheet_directory_uri().'/css/home.css?vn='.THEME_VERSION, array(), true);
         }
         wp_enqueue_style('lity-css', TEMPLATE_DIR.'/css/lity.min.css', array(), THEME_VERSION); // Lity lightbox
@@ -24,7 +24,7 @@
         if( have_rows('header_gallery') ):
             while ( have_rows('header_gallery') ) : the_row();
                 $title = get_sub_field('title');
-                $image = is_mobile() ? get_sub_field('image_mobile') : get_sub_field('image');
+                $image = rs_is_mobile() ? get_sub_field('image_mobile') : get_sub_field('image');
                 ?>
                 <div class="gallery">
                     <img src="<?php echo $image?>" alt="<?php echo $title;?>">
@@ -54,7 +54,7 @@
 
     <section id="residence">
         <h2>Our Residence</h2>
-        <?php if(!is_mobile()) { ?>
+        <?php if(!rs_is_mobile()) { ?>
             <ul id="subject">
                 <?php
                 if( have_rows('gallery') ):
@@ -84,7 +84,7 @@
                         $title = get_sub_field('title');
                         $logo = get_sub_field('logo');
                     ?>
-                    <?php if(is_mobile()) { ?>
+                    <?php if(rs_is_mobile()) { ?>
                         <img class='logo' src="<?php echo $logo; ?>" alt="<?php echo $title; ?>">
                     <?php } ?>
                     <div class="holder <?php echo $title;?>">

@@ -1,12 +1,10 @@
 <?php
 	// Mobile detect class
-	include 'includes/Mobile_Detect.php';
-	include 'includes/env.php';
-
-    define('THEME_VERSION', '1.8');
+	include_once 'includes/Mobile_Detect.php';
+	include_once 'includes/env.php';
 
 // Function for detecting mobile version
-    function is_mobile() {
+    function rs_is_mobile() {
         $detect = new Mobile_Detect;
 
         // Exclude tablets.

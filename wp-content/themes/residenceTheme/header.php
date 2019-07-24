@@ -16,7 +16,7 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/style.css?vn='.THEME_VERSION ?>">
     <?php
-    if(!is_mobile()) {
+    if(!rs_is_mobile()) {
         wp_enqueue_style('header', get_stylesheet_directory_uri().'/css/header.css?vn='.THEME_VERSION, array(), true);
         wp_enqueue_style('footer', get_stylesheet_directory_uri().'/css/footer.css?vn='.THEME_VERSION, array(), true);
     } else {
@@ -34,7 +34,7 @@
             </a>
 
             <?php
-                if(!is_mobile()) {
+                if(!rs_is_mobile()) {
                      wp_nav_menu( array(
                         'theme_location' => 'Main Menu',
                         'item_spacing' => 'discard'
@@ -53,7 +53,7 @@
                 </a>
             </div>
             
-            <?php if(is_mobile()) { ?>
+            <?php if(rs_is_mobile()) { ?>
                 <a href="tel:972543551095" id="phone"></a>
             <?php } ?>
         </header><!-- .site-header -->
