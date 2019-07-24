@@ -8,7 +8,15 @@
 <html <?php language_attributes(); ?> class="no-js">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134481042-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144501258-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-144501258-1');
+    </script>
+
     <title><?php wp_title(); ?></title>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
@@ -24,17 +32,7 @@
         wp_enqueue_style('footer-mobile', get_stylesheet_directory_uri().'/css/footer_mobile.css?vn='.THEME_VERSION, array(), true);
     }
     ?>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144501258-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-144501258-1');
-    </script>
     <?php wp_head(); ?>
-
 </head>
 <body <?php body_class(); ?>>
 		<header>
