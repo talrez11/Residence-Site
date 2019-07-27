@@ -98,7 +98,7 @@ jQuery(window).ready(function() {
 		jQuery.each(jQuery('#image_gallery ul'), function() {
 			jQuery(this).slick({
 				slidesToShow: 3,
-				slidesToScroll: 1,
+				slidesToScroll: 3,
 				arrows: false,
 				dots: true,
 				waitForAnimate: false,
