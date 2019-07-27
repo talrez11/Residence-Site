@@ -24,3 +24,24 @@ footer div a span {
     display: inline-block;
     vertical-align: middle;
 }
+
+a#up {
+    position: fixed;
+    bottom: 0;
+    right: 1em;
+    background-image: url("/wp-content/themes/residenceTheme/images/arrow-up2.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(225, 176, 88);
+    padding: 1.5em;
+    opacity: 0;
+    visibility: hidden;
+}
+
+a#up.show {
+    opacity: 1;
+    visibility: visible;
+}

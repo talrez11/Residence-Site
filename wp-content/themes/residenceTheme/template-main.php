@@ -19,7 +19,7 @@
 ?>
 
 <?php get_header(); ?>
-    <section class="header">
+    <section class="header" id="up">
         <?php
         if( have_rows('header_gallery') ):
             while ( have_rows('header_gallery') ) : the_row();

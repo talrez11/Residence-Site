@@ -44,14 +44,13 @@ a#phone {
     top: 2em;
     left: 0;
     background-color: rgb(0, 0, 0);
-    background-image: url('/wp-content/themes/residenceTheme/images/icon_2.jpg');
+    background-image: url('/wp-content/themes/residenceTheme/images/phone_icon.png');
     background-repeat: no-repeat;
-    background-position: 4px center;
-    background-size: 21px 22px;
+    background-position: 0px center;
+    background-size:100% auto;
     width: 40px;
     height: 40px;
     padding: 1em 1em 1em 1em;
     z-index: 100000000000;
     border-radius: 0 50% 50% 0;
-    border: 1px solid rgb(225, 176, 88);
 }

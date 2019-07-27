@@ -7,6 +7,7 @@
  */
 ?>
 	</div><!-- .site-content -->
+    <a href="#up" id="up"></a>
 	<footer id="bottom">
         <div>
             <a class='phone' href="tel:972543551095">

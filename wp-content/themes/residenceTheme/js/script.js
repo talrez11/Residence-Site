@@ -6,6 +6,7 @@ jQuery(window).ready(function() {
 	var errorMessageNewLetter = '<h4>Email not valid!';
 	var showMoreText = 'Read More';
 	var showLessText = 'Read Less';
+	var position = jQuery('#about').position().top;
 
 	// Detecting mobile devices
 	var isMobile = {
@@ -28,6 +29,15 @@ jQuery(window).ready(function() {
 	        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 	    }
 	};
+
+	jQuery(window).on('scroll', function(event) {
+		var scroll = jQuery(this).scrollTop();
+		if(scroll > position) {
+			jQuery('a#up').addClass('show');
+		} else {
+			jQuery('a#up').removeClass('show');
+		}
+	});
 
 	//Read more button event
 	jQuery('#more').on('click', function(event) {
@@ -172,5 +182,9 @@ jQuery(window).ready(function() {
 		jQuery("html, body").animate({ scrollTop: jQuery(id).offset().top - 50}, 1000);
 	});
 
+	jQuery('a#up').on('click', function() {
+		var id = jQuery(this).attr('href');
+		jQuery("html, body").animate({ scrollTop: jQuery(id).offset().top - 150}, 1000);
+	});
 
 });
