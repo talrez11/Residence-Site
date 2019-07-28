@@ -113,6 +113,7 @@ jQuery(window).ready(function() {
 			dots: true,
 			waitForAnimate: true,
 			focusOnSelect: true,
+			adaptiveHeight: true
 		});
 
 	} else if(isMobile.any()) {
