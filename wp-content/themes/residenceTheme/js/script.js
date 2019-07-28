@@ -149,7 +149,8 @@ jQuery(window).ready(function() {
 			arrows: false,
 			dots: true,
 			waitForAnimate: true,
-			focusOnSelect: true
+			focusOnSelect: true,
+			adaptiveHeight: true
 		});
 	}
 
