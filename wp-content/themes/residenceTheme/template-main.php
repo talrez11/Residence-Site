@@ -66,6 +66,7 @@
                             <a href="javascript:void(0);">
                                 <img src="<?php echo $subjectImage; ?>" alt="<?php echo $title; ?>">
                                 <span>Click to show portfolio</span>
+                                <p class="title"><?php echo $title;?></p>
                             </a>
                         </li>
                     <?php endwhile;
@@ -119,9 +120,11 @@
                     while ( have_rows('recommendation') ) : the_row();
                         $name = get_sub_field('name');
                         $description = get_sub_field('description');
+                        $subject = get_sub_field('subject');
                         ?>
                         <article class="<?php echo $title; ?>">
                             <div class="text">
+                                <h3><?php echo $subject?></h3>
                                 <?php echo $description; ?>
                                 <span><?php echo $name; ?></span>
                             </div>

@@ -118,6 +118,19 @@ footer h2:after,
     top: 50%;
 }
 
+#subject > li a p.title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0.3em;
+    text-align: center;
+    font-weight: 700;
+}
+
 #subject li a img {
     display: block;
     width: 100%;
@@ -236,6 +249,14 @@ button.slick-next.slick-arrow {
     margin-right: 1em;
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+#recommendation div#recommend article h3 {
+    display: inline-block;
+    font-weight: 700;
+    color: rgb(225, 176, 88);
+    background-color: black;
+    padding: 0.2em 0.5em;
 }
 
 #recommendation div#recommend article p {

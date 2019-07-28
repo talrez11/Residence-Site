@@ -32,9 +32,9 @@ a#up {
     background-image: url("/wp-content/themes/residenceTheme/images/arrow-up2.svg");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 100% auto;
-    width: 40px;
-    height: 40px;
+    background-size: 50% auto;
+    width: 25px;
+    height: 25px;
     background-color: rgb(225, 176, 88);
     padding: 1.5em;
     opacity: 0;

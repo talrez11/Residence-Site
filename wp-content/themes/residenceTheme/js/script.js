@@ -2,7 +2,7 @@ jQuery(window).ready(function() {
 	var headerNavigation = jQuery('#menu-main-menu a');
 	var loaderSign = jQuery('#sign div.loader');
 	var loaderContact = jQuery('#contact div.loader');
-	var successResponseNewsletter = '<h4>Thank You!</h4>';
+	var successResponseNewsletter = '<h4>Thank You!<br> We will contact you soon</h4>';
 	var errorMessageNewLetter = '<h4>Email not valid!';
 	var showMoreText = 'Read More';
 	var showLessText = 'Read Less';
