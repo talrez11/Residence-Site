@@ -61,6 +61,6 @@
             </div>
             
             <?php if(rs_is_mobile()) { ?>
-                <a href="tel:972543551095" id="phone"></a>
+                <a href="tel:972547557793" id="phone"></a>
             <?php } ?>
         </header><!-- .site-header -->

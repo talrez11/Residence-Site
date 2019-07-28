@@ -138,7 +138,8 @@ jQuery(window).ready(function() {
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				arrows: false,
-				dots: true,
+				dots: false,
+				autoplay: true,
 				waitForAnimate: true,
 				focusOnSelect: true
 			});
@@ -148,7 +149,9 @@ jQuery(window).ready(function() {
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			arrows: false,
-			dots: true,
+			dots: false,
+			easing: 'linear',
+			autoplay: true,
 			waitForAnimate: true,
 			focusOnSelect: true,
 			adaptiveHeight: true

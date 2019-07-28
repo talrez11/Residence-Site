@@ -10,9 +10,9 @@
     <a href="#up" id="up"></a>
 	<footer id="bottom">
         <div>
-            <a class='phone' href="tel:972543551095">
+            <a class='phone' href="tel:972547557793">
                 <img src="<?php echo TEMPLATE_DIR.'/images/icon_2.jpg'?>" alt="phone icon">
-                <span>+972-54-3551095</span>
+                <span>+972-54-7557793</span>
             </a>
 
             <a class='mail' href="mailto:info@tlvresidence.com">
