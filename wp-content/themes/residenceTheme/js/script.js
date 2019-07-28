@@ -108,7 +108,7 @@ jQuery(window).ready(function() {
 
 		jQuery('#recommend').slick({
 			slidesToShow: 3,
-			slidesToScroll: 1,
+			slidesToScroll: 3,
 			arrows: false,
 			dots: true,
 			waitForAnimate: true,
