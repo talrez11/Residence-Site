@@ -116,6 +116,17 @@ jQuery(window).ready(function() {
 			adaptiveHeight: true
 		});
 
+		jQuery(".holder > ul li a").fancybox({
+			'transitionIn'	:	'elastic',
+			'transitionOut'	:	'elastic',
+			'speedIn'		:	600,
+			'speedOut'		:	200,
+			'overlayShow'	:	false,
+			'cyclic'        :   true,
+			'scrolling'     : 'yes',
+			'showNavArrows' : true
+		});
+
 	} else if(isMobile.any()) {
 		jQuery('.header').slick({
 			autoplay: true,
@@ -157,18 +168,6 @@ jQuery(window).ready(function() {
 			adaptiveHeight: true
 		});
 	}
-
-	jQuery(".holder > ul li a").fancybox({
-		'transitionIn'	:	'elastic',
-		'transitionOut'	:	'elastic',
-		'speedIn'		:	600,
-		'speedOut'		:	200,
-		'overlayShow'	:	false,
-		'cyclic'        :   true,
-		'scrolling'     : 'yes',
-		'showNavArrows' : true
-	});
-
 
 	// control image gallery display
 	var subjectImages = jQuery('#subject li');

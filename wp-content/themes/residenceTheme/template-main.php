@@ -100,7 +100,7 @@
                                     $image = get_sub_field('image');
                                     ?>
                                     <li>
-                                        <a href="<?php echo $image; ?>" style="background-image: url('<?php echo $image; ?>'); rel="<?php echo $title;?>">
+                                        <a rel="<?php echo $title; ?>" href="<?php echo $image; ?>" style="background-image: url('<?php echo $image; ?>');">
                                             <span class="title"><?php echo $title; ?></span>
                                         </a>
                                     </li>
