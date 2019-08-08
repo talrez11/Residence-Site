@@ -1,6 +1,7 @@
 <?php
 //Template Name: Residence HP
     function late_load() {
+        wp_enqueue_style('fancybox-style', get_stylesheet_directory_uri().'/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css', array(), true);
         if(rs_is_mobile()) {
             wp_enqueue_style('home-page-mobile', get_stylesheet_directory_uri().'/css/home_mobile.css?vn='.THEME_VERSION, array(), true);
         } else if(!rs_is_mobile()) {
@@ -11,6 +12,9 @@
         wp_enqueue_script('slick-script', get_stylesheet_directory_uri().'/js/slick.min.js', array('jquery'), true);
         wp_enqueue_style('slick-theme-style', get_stylesheet_directory_uri().'/css/slick-theme.css', array(), true);
         wp_enqueue_style('slick-style', get_stylesheet_directory_uri().'/css/slick.css', array(), true);
+        wp_enqueue_script('fancy-box-script', get_stylesheet_directory_uri().'/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.pack.js?vn='.THEME_VERSION, array('jquery'), true);
+        wp_enqueue_script('fancy-easing-script', get_stylesheet_directory_uri().'/jquery.fancybox-1.3.4/fancybox/fancybox/jquery.easing-1.4.pack.js?vn='.THEME_VERSION, array('jquery'), true);
+        wp_enqueue_script('fancy-mousewheel-script', get_stylesheet_directory_uri().'/jquery.fancybox-1.3.4/fancybox/jquery.mousewheel-3.0.4.pack.js?vn='.THEME_VERSION, array('jquery'), true);
         wp_enqueue_script('script', get_stylesheet_directory_uri().'/js/script.js?vn='.THEME_VERSION, array('jquery'), true);
     }
 
@@ -96,7 +100,7 @@
                                     $image = get_sub_field('image');
                                     ?>
                                     <li>
-                                        <a href="<?php echo $image; ?>" style="background-image: url('<?php echo $image; ?>');" data-lity>
+                                        <a href="<?php echo $image; ?>" style="background-image: url('<?php echo $image; ?>'); rel="<?php echo $title;?>">
                                             <span class="title"><?php echo $title; ?></span>
                                         </a>
                                     </li>
