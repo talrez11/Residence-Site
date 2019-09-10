@@ -88,6 +88,7 @@
                 while ( have_rows('gallery') ) : the_row();
                         $title = get_sub_field('title');
                         $logo = get_sub_field('logo');
+                        $rel = explode(' ',trim($title));
                     ?>
                     <?php if(rs_is_mobile()) { ?>
                         <img class='logo' src="<?php echo $logo; ?>" alt="<?php echo $title; ?>">
@@ -97,10 +98,11 @@
                             <?php
                             if( have_rows('related_images') ):
                                 while ( have_rows('related_images') ) : the_row();
+                                    $href = rs_is_mobile() ? 'javascript:void(0)' : get_sub_field('image');
                                     $image = get_sub_field('image');
                                     ?>
                                     <li>
-                                        <a rel="<?php echo $title; ?>" href="<?php echo $image; ?>" style="background-image: url('<?php echo $image; ?>');">
+                                        <a rel="<?php echo $rel[0]; ?>" href="<?php echo $href; ?>" style="background-image: url('<?php echo $image; ?>');">
                                             <span class="title"><?php echo $title; ?></span>
                                         </a>
                                     </li>
