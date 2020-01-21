@@ -186,9 +186,4 @@
         </form>
     </section>
 
-    <section class="order">
-        <div style="width:100%;height:815px">
-            <iframe style="width:100%;height:100%;border:0" src="https://secure.ezgo.co.il/Main/OnLineSearchFrame.aspx?iItemId=4968&BtBk=Lightblue&Lng=en&Cur=0"></iframe>
-        </div>
-    </section>
 <?php get_footer(); ?>
