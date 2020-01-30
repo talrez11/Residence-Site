@@ -2,6 +2,8 @@
     Header style
 */
 
+@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
+
 header {
     display: block;
     text-align: center;
@@ -44,9 +46,19 @@ header div {
     transition: all 0.3s;
 }
 
+#menu-main-menu li.order a {
+    background-color: #e1b058;
+    font-weight: 700;
+}
+
 #menu-main-menu li a.active,
 #menu-main-menu li a:hover {
     color: #e1b058;
+}
+
+#menu-main-menu li.order a.active,
+#menu-main-menu li.order a:hover {
+    color: black;
 }
 
 header div.social {
