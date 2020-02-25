@@ -23,6 +23,7 @@
 ?>
 
 <?php get_header(); ?>
+    <?php include 'includes/sticky-order.php'; ?>
     <section class="header" id="up">
         <?php
         if( have_rows('header_gallery') ):
@@ -188,17 +189,17 @@
 
     <section class="order" id="order">
         <h2>Reservation</h2>
-        <div>
+        <div id="residence_reserve">
             <h3>Residence 26</h3>
             <div style="width:100%;height:515px"><iframe style="width:100%;height:100%;border:0" src="https://secure.ezgo.co.il/Main/OnLineSearchFrame.aspx?iItemId=11130&BtBk=Lightblue&Lng=en&Cur=0&CRA=https://tlvresidence.com/thankyou"></iframe></div>
         </div>
 
-        <div>
+        <div id="allenby_reserve">
             <h3>Allenby Bauhaus Apartments</h3>
             <div style="width:100%;height:515px"><iframe style="width:100%;height:100%;border:0" src="https://secure.ezgo.co.il/Main/OnLineSearchFrame.aspx?iItemId=4968&BtBk=Lightblue&Lng=en&Cur=0&CRA=https://tlvresidence.com/thankyou"></iframe></div>
         </div>
 
-        <div>
+        <div id="tlv_reserve">
             <h3>Inn TLV</h3>
             <div style="width:100%;height:515px"><iframe style="width:100%;height:100%;border:0" src="https://secure.ezgo.co.il/Main/OnLineSearchFrame.aspx?iItemId=5958&BtBk=Lightblue&Lng=en&Cur=0&CRA=https://tlvresidence.com/thankyou"></iframe></div>
         </div>

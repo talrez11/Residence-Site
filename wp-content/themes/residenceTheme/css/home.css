@@ -2,6 +2,40 @@
     Home Style
 */
 
+div.reserve {
+    position: fixed;
+    right: 0;
+    bottom: 100px;
+    background-color: #000;
+    z-index: 10000;
+    text-align: center;
+    padding: 2em 1em;
+    border: 2px solid #e1b058;
+    border-radius: 5% 0 0 5%;
+}
+
+div.reserve h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+div.reserve a {
+    display: block;
+    text-decoration: none;
+    margin-top: 1em;
+    color: #e1b058;
+    background-color: #2d2828;
+    padding: 0.2em;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+div.reserve a:hover {
+    color: white;
+    background-color: #e1b058;
+}
+
 iframe {
     display: block;
     margin-left: auto;
@@ -31,6 +65,10 @@ footer,
     padding: 2em calc((100% - 1200px)/ 2);
 }
 
+section.message {
+    padding: 2em calc((100% - 600px)/ 2);
+}
+
 section.message p {
     text-align: center;
     font-size: 1.5rem;
@@ -42,6 +80,7 @@ section.message p {
     text-align: center;
 }
 
+section.message h2,
 section.order h2,
 footer h2,
 #member h2,
@@ -54,6 +93,7 @@ footer h2,
     position: relative;
 }
 
+section.message h2:after,
 section.order h2:after,
 footer h2:after,
 #member h2:after,

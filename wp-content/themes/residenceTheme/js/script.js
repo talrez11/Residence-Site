@@ -80,6 +80,11 @@ jQuery(window).ready(function() {
 	}
 
 	if(!isMobile.any()) {
+		jQuery('div.reserve a').on('click', function(e) {
+			e.preventDefault();
+			var id = jQuery(this).attr('href');
+			jQuery("html, body").animate({ scrollTop: jQuery(id).offset().top - 150}, 1000);
+		});
 		// Header gallery
 		jQuery('.header').slick({
 			autoplay: true,
@@ -128,6 +133,12 @@ jQuery(window).ready(function() {
 		});
 
 	} else if(isMobile.any()) {
+		jQuery('div.reserve a').on('click', function(e) {
+			e.preventDefault();
+			var id = jQuery(this).attr('href');
+			jQuery("html, body").animate({ scrollTop: jQuery(id).offset().top - 50}, 1000);
+		});
+
 		jQuery('.header').slick({
 			autoplay: true,
 			autoplaySpeed: 5000,
